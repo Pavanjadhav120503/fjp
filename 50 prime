@@ -1,0 +1,19 @@
+public class primeNumber {
+public static void main (String[] args) {
+int primeCount = 0;
+int currentNumber = 2;
+int totalPrimesToFind = 50;
+System.out printin( "First " + totalPrimesToFind + " Prime Numbers:"); 
+while (primeCount ‹ totalPrimesToFind) {
+int divisorCount = 0;
+for (int divisor = 1; divisor <= currentNumber; divisor++) {
+if (currentNumber % divisor == 0) {
+divisorCount++;
+}
+}
+if (divisorCount == 2) {
+System. out print(currentNumber + ", “);
+primeCount++;
+}
+currentNumber++;
+}}}
