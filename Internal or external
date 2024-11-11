@@ -1,0 +1,24 @@
+Internal to internal
+ORG 0000H 
+MOV R7,#05H 
+MOV R0,#30H 
+MOV R1,#50H 
+LOOP: MOV A,@R0 
+MOV @R1,A 
+INC R0 
+INC R1 
+DJNZ R7, LOOP 
+NOP 
+END 
+Internal to external
+ORG 0000H 
+MOV R2,#0AH 
+MOV R0,#50H 
+MOV DPTR,#0100H 
+LOOP: MOV A,@R0 
+MOVX @DPTR,A 
+INC R0 
+INC DPTR 
+DJNZ R2, LOOP 
+NOP 
+END
